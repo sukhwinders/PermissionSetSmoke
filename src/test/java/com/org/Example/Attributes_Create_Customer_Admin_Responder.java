@@ -1,10 +1,6 @@
 package com.org.Example;
-
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -14,16 +10,19 @@ import com.utils.Data_loading;
 public class Attributes_Create_Customer_Admin_Responder {
 	@BeforeClass
 	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
+		/*baseUrl = "https://login.salesforce.com";
+		//driver = new FirefoxDriver();
+		ChromeDriverManager.getInstance().setup();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+		driver.navigate().to(baseUrl);*/
+		driver = guitils.openBrowser(driver);
 	}
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 	
 	WebDriver driver;

@@ -1,5 +1,7 @@
 package com.org.Example;
 
+import io.github.bonigarcia.wdm.ChromeDriverManager;
+
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -7,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -18,9 +21,7 @@ public class TP_Relationship_Create_Customer_admin_Requestor {
 	Data_loading guitils = new Data_loading();
 	String userName1 = guitils.getUserName("CustomerAdminRequestorUsername");
 	String password1 = guitils.getPassword("CustomerAdminRequestorPassword");
-	//String Responder = guitils.getDATA("TPResponder");
-	//String userName2 = guitils.getUserName("ResponderUsername");
-	//String password2 = guitils.getPassword("ResponderPassword");
+
 	String comment = guitils.getPassword("Comments");
 
 	Date d = new Date(System.currentTimeMillis());
@@ -38,19 +39,20 @@ public class TP_Relationship_Create_Customer_admin_Requestor {
 
 	@BeforeClass
 	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
-		//String Path = guitils.getProperties("Chrome_Driver_Path");
-		//System.setProperty("webdriver.chrome.driver", Path+"chromedriver.exe");
-		//driver = new ChromeDriver();      
-		driver = new FirefoxDriver();
+		/*baseUrl = "https://login.salesforce.com";     
+		//driver = new FirefoxDriver();
+		ChromeDriverManager.getInstance().setup();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+		driver.navigate().to(baseUrl);*/
+		
+		driver = guitils.openBrowser(driver);
 	}
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 
 	@Test

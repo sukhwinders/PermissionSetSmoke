@@ -22,14 +22,15 @@ public class TestTPGroupEditCAResponder {
 	
 	@BeforeClass
 	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
+		/*baseUrl = "https://login.salesforce.com";
 		//driver = new FirefoxDriver();
 		String Path = guitils.getProperties("Chrome_Driver_Path");
 		System.setProperty("webdriver.chrome.driver", Path+"chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+		driver.navigate().to(baseUrl);*/
+		driver = guitils.openBrowser(driver);
 	}
 
 	@AfterClass

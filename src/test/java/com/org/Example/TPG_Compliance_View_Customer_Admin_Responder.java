@@ -1,11 +1,14 @@
 package com.org.Example;
 
+import io.github.bonigarcia.wdm.ChromeDriverManager;
+
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -23,16 +26,19 @@ public class TPG_Compliance_View_Customer_Admin_Responder {
 	String partner_name = guitils.getDATA("Partner_name");
 	@BeforeClass
 	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
+		/*baseUrl = "https://login.salesforce.com";
+		//driver = new FirefoxDriver();
+		ChromeDriverManager.getInstance().setup();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+		driver.navigate().to(baseUrl);*/
+		driver = guitils.openBrowser(driver);
 	}
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 
 	@Test

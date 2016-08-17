@@ -1,10 +1,6 @@
 package com.org.Example;
-
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -12,20 +8,7 @@ import org.testng.annotations.Test;
 import com.utils.Data_loading;
 
 public class Attributes_Create_Customer_Admin_Requestor {
-	@BeforeClass
-	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
-	}
 
-	@AfterClass
-	public void afterClass() {
-		//driver.quit();
-	}
-	
 	WebDriver driver;
 	String baseUrl;
 
@@ -34,6 +17,10 @@ public class Attributes_Create_Customer_Admin_Requestor {
 	String password1 = guitils.getPassword("CustomerAdminRequestorPassword");
 	String Icixid = guitils.getDATA("icixid");
 
+	@BeforeClass
+	public void beforeClass()  {
+		driver = guitils.openBrowser(driver);
+	}
 	@Test
 	public void Customer_Admin_Requestor_On_Attributes() throws Exception {
 		guitils.loginToPortal(userName1, password1, driver);
@@ -55,4 +42,8 @@ public class Attributes_Create_Customer_Admin_Requestor {
 		Thread.sleep(5000);
 		System.out.println("Success: Create permissions");
  }
+	@AfterClass
+	public void afterClass() throws Exception {
+		//driver.quit();
+	}
 }

@@ -1,5 +1,7 @@
 package com.utils;
 
+import io.github.bonigarcia.wdm.ChromeDriverManager;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,12 +13,14 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
@@ -626,4 +630,19 @@ public class Data_loading {
 	    driver.findElement(By.xpath("//message-dialog/div[2]/div/div/div[3]/button")).click();
 
 	}
+	public WebDriver openBrowser(WebDriver driver1)
+	 {  
+	 String baseUrl = "https://login.salesforce.com";
+	  //driver = new FirefoxDriver();
+	  //System.setProperty("webdriver.chrome.driver", "/Users/gurpinder.singh/Downloads/chromedriver");
+	  ChromeDriverManager.getInstance().setup();
+	  driver1 = new ChromeDriver();  
+	  driver1.manage().window().maximize();
+	  
+	  driver1.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+	  driver1.navigate().to(baseUrl);
+	  return driver1;
+	  
+	  
+	 }
 }

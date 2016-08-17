@@ -1,8 +1,11 @@
 package com.org.Example;
 
+import io.github.bonigarcia.wdm.ChromeDriverManager;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -21,20 +24,19 @@ public class TestTPGroupCreateCARequestor{
 	String password1 = guitils.getPassword("CustomerAdminRequestorPassword");
 	
 	@BeforeClass
-	public void beforeClass() {
-		baseUrl = "https://login.salesforce.com";
-		driver = new FirefoxDriver();
-		/*String Path = ("Driverpath");
-		System.setProperty("webdriver.chrome.driver", Path+"chromedriver.exe");
-		driver = new ChromeDriver();*/
+	public void beforeClass() throws Exception{
+		/*baseUrl = "https://login.salesforce.com";
+		ChromeDriverManager.getInstance().setup();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driver.navigate().to(baseUrl);
+		driver.navigate().to(baseUrl);*/
+		driver = guitils.openBrowser(driver);
 	}
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 	
 	

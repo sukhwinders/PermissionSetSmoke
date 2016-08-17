@@ -3,39 +3,44 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Default suite]]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.org.Example.myproject.TestTPGroupCreateCARequestor"/>
+      <class name="com.org.Example.TPG_Compliance_Set_Send_Customer_Admin_Requestor"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="com.org.Example.myproject.TestTPGroupCreateCARequestor">
+      <class name="com.org.Example.TPG_Compliance_Set_Send_Customer_Admin_Requestor">
         <methods>
-          <include name="CreateTPGroup"/>
+          <include name="TPG_Compliance_Set_then_Send"/>
+          <include name="afterClass"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- com.org.Example.myproject.TestTPGroupCreateCARequestor -->
+      </class> <!-- com.org.Example.TPG_Compliance_Set_Send_Customer_Admin_Requestor -->
     </classes>
   </test> <!-- Default test(failed) -->
   <test name="Default test(failed)">
     <classes>
-      <class name="com.org.Example.myproject.TestTPGroupCreateCARequestor">
+      <class name="com.org.Example.TPG_Compliance_Set_Send_Customer_Admin_Requestor">
         <methods>
-          <include name="CreateTPGroup"/>
+          <include name="TPG_Compliance_Set_then_Send"/>
+          <include name="afterClass"/>
+          <include name="afterClass"/>
           <include name="beforeClass"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- com.org.Example.myproject.TestTPGroupCreateCARequestor -->
+      </class> <!-- com.org.Example.TPG_Compliance_Set_Send_Customer_Admin_Requestor -->
     </classes>
   </test> <!-- Default test(failed) -->
   <test name="Default test(failed)(failed)">
     <classes>
-      <class name="com.org.Example.myproject.TestTPGroupCreateCARequestor">
+      <class name="com.org.Example.TPG_Compliance_Set_Send_Customer_Admin_Requestor">
         <methods>
-          <include name="CreateTPGroup"/>
+          <include name="TPG_Compliance_Set_then_Send"/>
+          <include name="afterClass"/>
+          <include name="afterClass"/>
           <include name="beforeClass"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- com.org.Example.myproject.TestTPGroupCreateCARequestor -->
+      </class> <!-- com.org.Example.TPG_Compliance_Set_Send_Customer_Admin_Requestor -->
     </classes>
   </test> <!-- Default test(failed)(failed) -->
 </suite> <!-- Failed suite [Failed suite [Default suite]] -->
