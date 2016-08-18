@@ -638,7 +638,6 @@ public class Data_loading {
 	  ChromeDriverManager.getInstance().setup();
 	  driver1 = new ChromeDriver();  
 	  driver1.manage().window().maximize();
-	  
 	  driver1.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 	  driver1.navigate().to(baseUrl);
 	  return driver1;

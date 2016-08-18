@@ -43,7 +43,7 @@ public class Attributes_Create_Customer_Admin_Requestor {
 		System.out.println("Success: Create permissions");
  }
 	@AfterClass
-	public void afterClass() throws Exception {
-		//driver.quit();
+	public void afterClass() {
+		driver.quit();
 	}
 }

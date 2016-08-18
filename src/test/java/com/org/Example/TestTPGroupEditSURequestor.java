@@ -35,7 +35,7 @@ public class TestTPGroupEditSURequestor {
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 	
 	

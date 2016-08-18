@@ -35,7 +35,7 @@ public class TestTPGroupViewSUResponder {
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 	
 	

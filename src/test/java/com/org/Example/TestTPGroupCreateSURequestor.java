@@ -37,7 +37,7 @@ public class TestTPGroupCreateSURequestor {
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 	
 	

@@ -39,7 +39,7 @@ public class TestTPGroupDeleteCARequestor {
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 	
 	

@@ -51,7 +51,7 @@ public class TP_Relationship_view_Customer_admin_Requestor {
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 
 	@Test

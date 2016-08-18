@@ -35,7 +35,7 @@ public class TestTPGroupViewCARequestor {
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 	
 	

@@ -32,7 +32,7 @@ public class Attributes_Edit_Customer_Admin_Requestor {
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 	
 	WebDriver driver;

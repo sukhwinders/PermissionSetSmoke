@@ -36,7 +36,7 @@ public class TestTPGroupCreateCAResponder {
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 	
 	

@@ -54,7 +54,7 @@ public class TP_Relationship_Edit_Standard_User_Requestor {
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 
 	@Test

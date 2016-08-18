@@ -53,7 +53,7 @@ public class TP_Relationship_Create_Standard_User_Requestor {
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 
 	@Test

@@ -35,7 +35,7 @@ public class TestTPGroupEditCAResponder {
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 	
 	

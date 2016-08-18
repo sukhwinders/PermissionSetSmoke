@@ -53,7 +53,7 @@ public class TP_Relationship_Create_Customer_admin_Responder {
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 	}
 
 	@Test
