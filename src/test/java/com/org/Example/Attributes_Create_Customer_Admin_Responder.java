@@ -27,14 +27,14 @@ public class Attributes_Create_Customer_Admin_Responder {
 	
 	WebDriver driver;
 	String baseUrl;
-
+	
 	Data_loading guitils = new Data_loading();
 	String userName1 = guitils.getUserName("CustomerAdminResponderUsername");
 	String password1 = guitils.getPassword("CustomerAdminResponderPass"
 			+ ""
 			+ "word");
 	String Icixid = guitils.getDATA("icixid");
-
+	int randomNumber=guitils.getRandomNumberFrom();
 	@Test
 	public void Customer_Admin_Responder_On_Attributes() throws Exception {
 		guitils.loginToPortal(userName1, password1, driver);
@@ -53,7 +53,7 @@ public class Attributes_Create_Customer_Admin_Responder {
 		Thread.sleep(3000);
 		
 		driver.findElement(By.xpath("html/body/div[5]/div[3]/div[2]/div[2]/div/div[2]/form/section/div/div/section[1]/div[1]/div/div/input"))
-			.sendKeys("Testing");
+			.sendKeys("Testing"+randomNumber);
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//button[@title='Save']")).click();
 		Thread.sleep(5000);

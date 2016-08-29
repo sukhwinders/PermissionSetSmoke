@@ -66,7 +66,16 @@ public class Tags_Delete_Customer_Admin_Responder {
 		
 		if(listInputs.size()>0)
 		 {
+			String value = driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[4]/div/div[2]/div[1]/div/div[2]/div/div[3]/div/div/table/tbody/tr[1]/td[1]/span")).getText();
+			if(value.equals("Tag")){
 			listInputs.get(0).click();
+			}
+			else{
+				driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[4]/div/div[2]/div[1]/div/div[2]/div/div[3]/div/div/table/thead/tr/th[2]/div/span/span/a")).click();
+				Thread.sleep(3000);
+				//listInputs.get(0).click();
+				driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[4]/div/div[2]/div[1]/div/div[2]/div/div[3]/div/div/table/tbody/tr[1]/th/a")).click();
+			}
 			// Delete Attributes
 			driver.findElement(By.xpath("//div[contains(@title,'Delete')]")).click();
 			Thread.sleep(3000);
@@ -78,5 +87,6 @@ public class Tags_Delete_Customer_Admin_Responder {
 		 {
 			 Assert.assertEquals(0, 1);
 		 }
+
  }
 }

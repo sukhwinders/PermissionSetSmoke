@@ -69,7 +69,7 @@ public class Tags_Edit_Customer_Admin_Requestor {
 			listInputs.get(0).click();
 			// Edit Attribute 		
 			driver.findElement(By.xpath("//div[contains(@title,'Edit')]")).click();
-			driver.findElement(By.xpath("html/body/div[5]/div[3]/div[2]/div[2]/div/div[2]/form/section/div/div/section[1]/div[1]/div/div/input"))
+			driver.findElement(By.xpath("html/body/div[5]/div[3]/div[3]/div[2]/div/div[2]/form/section/div/div/section[1]/div[1]/div/div/input"))
 				.sendKeys(".Edited");
 			Thread.sleep(5000);
 			//driver.findElement(By.xpath("//button[@title='Save']")).click();

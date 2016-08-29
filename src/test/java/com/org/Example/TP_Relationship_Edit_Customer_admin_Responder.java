@@ -20,8 +20,8 @@ import com.utils.Data_loading;
 
 public class TP_Relationship_Edit_Customer_admin_Responder {
 	Data_loading guitils = new Data_loading();
-	String userName1 = guitils.getUserName("CustomerAdminRequestorUsername");
-	String password1 = guitils.getPassword("CustomerAdminRequestorPassword");
+	String userName1 = guitils.getUserName("CustomerAdminResponderUsername");
+	String password1 = guitils.getPassword("CustomerAdminResponderPassword");
 	//String Responder = guitils.getDATA("TPResponder");
 	//String userName2 = guitils.getUserName("ResponderUsername");
 	//String password2 = guitils.getPassword("ResponderPassword");
@@ -106,7 +106,7 @@ public class TP_Relationship_Edit_Customer_admin_Responder {
 		driver.findElement(By.id("txt_UURelationship_Name")).sendKeys("Edited");
 		Thread.sleep(3000);
 		driver.findElement(By.cssSelector("#btn_UPRelationship_Save")).click();
-		driver.findElement(By.xpath("//message-dialog/div[2]/div/div/div[3]/button")).click();
+		//driver.findElement(By.xpath("//message-dialog/div[2]/div/div/div[3]/button")).click();
 		
 		System.out.println("Success: View permissions");
 		

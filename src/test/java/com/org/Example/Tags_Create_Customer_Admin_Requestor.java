@@ -39,7 +39,7 @@ public class Tags_Create_Customer_Admin_Requestor {
 	String userName1 = guitils.getUserName("CustomerAdminRequestorUsername");
 	String password1 = guitils.getPassword("CustomerAdminRequestorPassword");
 	String Icixid = guitils.getDATA("icixid");
-
+	int randomNumber=guitils.getRandomNumberFrom();
 	@Test
 	public void Customer_Admin_Requestor_On_Tags() throws Exception {
 		guitils.loginToPortal(userName1, password1, driver);
@@ -56,7 +56,7 @@ public class Tags_Create_Customer_Admin_Requestor {
 // Creating New Attribute
 		driver.findElement(By.xpath("//div[@title='New']")).click();
 		driver.findElement(By.xpath("html/body/div[5]/div[3]/div[2]/div[2]/div/div[2]/form/section/div/div/section[1]/div[1]/div/div/input"))
-			.sendKeys("Testing");
+			.sendKeys("Testing"+randomNumber);
 		
 		driver.findElement(By.linkText("Attribute")).click();
 		//driver.findElement(By.xpath("html/body/div[5]/div[3]/div[2]/div[2]/div/div[2]/form/section/div/div/section[1]/div[2]/div[1]/div/div/div/div/div/a")).click();

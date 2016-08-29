@@ -69,7 +69,7 @@ public class TPG_Compliance_View_Customer_Admin_Responder {
 			
 			List<WebElement> Relations = driver.findElements(By.xpath("//table[@class='forceRecordLayout uiVirtualDataGrid--default uiVirtualDataGrid forceVirtualGrid']/tbody/tr"));
 			if(Relations.size()>0){
-			//	Relations.get(0).click();
+				//Relations.get(0).click();
 			driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[5]/div/div[2]/div/div[3]/div/div/table/tbody/tr[1]/th/a")).click();
 
 			//driver.findElement(By.xpath("//table[@class='forceRecordLayout uiVirtualDataGrid--default uiVirtualDataGrid forceVirtualGrid']/tbody/tr/th/a"))

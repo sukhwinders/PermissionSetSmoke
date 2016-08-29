@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,8 +21,8 @@ import com.utils.Data_loading;
 public class Tags_Delete_Customer_Admin_Requestor {
 	@BeforeClass
 	public void beforeClass() {
-		/*baseUrl = "https://login.salesforce.com";
-		//driver = new FirefoxDriver();
+/*		baseUrl = "https://login.salesforce.com";
+		driver = new FirefoxDriver();
 		ChromeDriverManager.getInstance().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -66,7 +67,16 @@ public class Tags_Delete_Customer_Admin_Requestor {
 		
 		if(listInputs.size()>0)
 		 {
+			String value = driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[4]/div/div[2]/div[1]/div/div[2]/div/div[3]/div/div/table/tbody/tr[1]/td[1]/span")).getText();
+			if(value.equals("Tag")){
 			listInputs.get(0).click();
+			}
+			else{
+				driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[4]/div/div[2]/div[1]/div/div[2]/div/div[3]/div/div/table/thead/tr/th[2]/div/span/span/a")).click();
+				Thread.sleep(3000);
+				//listInputs.get(0).click();
+				driver.findElement(By.xpath("html/body/div[5]/div[1]/section/div[1]/div[1]/div[4]/div/div[2]/div[1]/div/div[2]/div/div[3]/div/div/table/tbody/tr[1]/th/a")).click();
+			}
 			// Delete Attributes
 			driver.findElement(By.xpath("//div[contains(@title,'Delete')]")).click();
 			Thread.sleep(3000);

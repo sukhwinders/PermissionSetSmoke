@@ -41,7 +41,7 @@ public class Tags_Create_Customer_Admin_Responder {
 			+ ""
 			+ "word");
 	String Icixid = guitils.getDATA("icixid");
-
+	int randomNumber=guitils.getRandomNumberFrom();
 	@Test
 	public void Customer_Admin_Responder_On_Tags() throws Exception {
 		guitils.loginToPortal(userName1, password1, driver);
@@ -60,7 +60,7 @@ public class Tags_Create_Customer_Admin_Responder {
 		Thread.sleep(3000);
 		
 		driver.findElement(By.xpath("html/body/div[5]/div[3]/div[2]/div[2]/div/div[2]/form/section/div/div/section[1]/div[1]/div/div/input"))
-			.sendKeys("Testing");
+			.sendKeys("Testing"+randomNumber);
 		Thread.sleep(3000);
 		driver.findElement(By.linkText("Attribute")).click();
 		//driver.findElement(By.xpath("html/body/div[5]/div[3]/div[2]/div[2]/div/div[2]/form/section/div/div/section[1]/div[2]/div[1]/div/div/div/div/div/a")).click();

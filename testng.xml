@@ -1,12 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" >
-  <test name="Test" preserve-order="true">
+  <test name="Test"> 
     <classes>
-      <class name="com.org.Example.Attributes_Create_Customer_Admin_Requestor"/>
+     <class name="com.org.Example.Attributes_Create_Customer_Admin_Requestor"/>
       <class name="com.org.Example.Attributes_Create_Customer_Admin_Responder"/>
       <class name="com.org.Example.Attributes_Delete_Customer_Admin_Requestor"/>
-    </classes>
-    
+      <class name="com.org.Example.Attributes_Delete_Customer_Admin_Responder"/>
+      <class name="com.org.Example.Attributes_Edit_Customer_Admin_Requestor"/>
+      <class name="com.org.Example.Attributes_Edit_Customer_Admin_Responder"/>
+      <class name="com.org.Example.Attributes_View_Customer_Admin_Requestor"/>
+      <class name="com.org.Example.Attributes_View_Customer_Admin_Responder"/>
+      <class name="com.org.Example.Attributes_View_Standard_User_Requestor"/>
+     <class name="com.org.Example.Attributes_View_Standard_User_Responser"/> 
+     
+     <class name="com.org.Example.Tags_Create_Customer_Admin_Requestor"/>
+     <class name="com.org.Example.Tags_Create_Customer_Admin_Responder"/>
+     <class name="com.org.Example.Tags_Delete_Customer_Admin_Requestor"/>
+     <class name="com.org.Example.Tags_Delete_Customer_Admin_Responder"/>
+     <class name="com.org.Example.Tags_Edit_Customer_Admin_Requestor"/>
+     <class name="com.org.Example.Tags_Edit_Customer_Admin_Responder"/>
+     <class name="com.org.Example.Tags_View_Customer_Admin_Requestor"/>
+     <class name="com.org.Example.Tags_View_Customer_Admin_Responder"/>
+     <class name="com.org.Example.Tags_View_Standard_User_Requestor"/>
+     <class name="com.org.Example.Tags_View_Standard_User_Responser"/>
+     
+     <class name="com.org.Example.TestTPGroupCreateCARequestor"/>
+     <class name="com.org.Example.TestTPGroupCreateCAResponder"/>
+     <class name="com.org.Example.TestTPGroupDeleteCARequestor"/>
+     <class name="com.org.Example.TestTPGroupDeleteCAResponder"/>
+     <class name="com.org.Example.TestTPGroupEditCARequestor"/>
+     <class name="com.org.Example.TestTPGroupEditCAResponder"/>
+     <class name="com.org.Example.TestTPGroupViewCAResponder"/>
+     <class name="com.org.Example.TestTPGroupViewSURequestor"/>
+     <class name="com.org.Example.TestTPGroupViewSUResponder"/>
+     <class name="com.org.Example.TestTPGroupViewCAResponder"/>
+     
+     <class name="com.org.Example.TP_Relationship_Create_Customer_admin_Requestor"/>
+     <class name="com.org.Example.TP_Relationship_Create_Standard_User_Requestor"/>
+     <class name="com.org.Example.TP_Relationship_Create_Standard_User_Responder"/>
+     <class name="com.org.Example.TP_Relationship_Edit_Customer_admin_Requestor"/>
+     <class name="com.org.Example.TP_Relationship_Edit_Standard_User_Requestor"/>
+     <class name="com.org.Example.TP_Relationship_Edit_Standard_User_Responder"/>
+     <class name="com.org.Example.TP_Relationship_view_Customer_admin_Requestor"/>
+     <class name="com.org.Example.TP_Relationship_view_Standard_User_Requestor"/>
+     <class name="com.org.Example.TP_Relationship_view_Standard_User_Responder"/>
+     
+   <!-- Customer Admin Responder TP Relationship Not working  -->
+  <!--<class name="com.org.Example.TP_Relationship_Create_Customer_admin_Responder"/>
+      <class name="com.org.Example.TP_Relationship_Edit_Customer_admin_Responder"/>
+      <class name="com.org.Example.TP_Relationship_view_Customer_admin_Responder"/>  --> 
+      
+ 	 <class name="com.org.Example.TPG_Compliance_Delete_Customer_Admin_Requestor"/>
+     <class name="com.org.Example.TPG_Compliance_Edit_Customer_Admin_Requestor"/>
+     <class name="com.org.Example.TPG_Compliance_Set_Send_Customer_Admin_Requestor"/>
+     <class name="com.org.Example.TPG_Compliance_View_Customer_Admin_Requestor"/>
+     <class name="com.org.Example.TPG_Compliance_View_Customer_Admin_Responder"/>
+     <class name="com.org.Example.TPG_Compliance_View_Standard_User_Requestor"/>
+     <class name="com.org.Example.TPG_Compliance_View_Standard_User_Responder"/>
+     
+     
+    </classes>   
   </test> <!-- Test -->
 </suite> <!-- Suite -->

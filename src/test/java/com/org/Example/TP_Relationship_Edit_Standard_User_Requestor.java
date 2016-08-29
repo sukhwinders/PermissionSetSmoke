@@ -108,7 +108,7 @@ public class TP_Relationship_Edit_Standard_User_Requestor {
 		driver.findElement(By.id("txt_UURelationship_Name")).sendKeys("Edited");
 		Thread.sleep(3000);
 		driver.findElement(By.cssSelector("#btn_UPRelationship_Save")).click();
-		driver.findElement(By.xpath("//message-dialog/div[2]/div/div/div[3]/button")).click();
+		//driver.findElement(By.xpath("//message-dialog/div[2]/div/div/div[3]/button")).click();
 		
 		System.out.println("Success: View permissions");
 		

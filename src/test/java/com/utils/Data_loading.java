@@ -13,6 +13,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.Properties;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.RandomStringUtils;
@@ -514,7 +515,7 @@ public class Data_loading {
 			Thread.sleep(5000);
 			String TPGMessage = driver.findElement(By.cssSelector("div.slds-modal__content div.slds-m-around--medium p")).getText();
 			
-			Assert.assertEquals(TPGMessage, "Trading partner group created successfully");
+			Assert.assertEquals(TPGMessage, "Trading partner group has been updated successfully");
 			
 			Thread.sleep(3000);
 		 }
@@ -559,11 +560,11 @@ public class Data_loading {
 		driver.findElement(By.xpath(".//*[@id='btnSave']")).click();
 		Thread.sleep(3000);
 		
-		String TPGMessage = driver.findElement(By.cssSelector("div.slds-modal__content div.slds-m-around--medium p")).getText();
+		//String TPGMessage = driver.findElement(By.cssSelector("div.slds-modal__content div.slds-m-around--medium p")).getText();
 		
-		Assert.assertEquals(TPGMessage, "Trading partner group created successfully");
-		Thread.sleep(3000);
-		driver.findElement(By.cssSelector("div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand")).click();
+		//Assert.assertEquals(TPGMessage, "Trading partner group created successfully");
+		//Thread.sleep(3000);
+		//driver.findElement(By.cssSelector("div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand")).click();
 		
 		driver.switchTo().defaultContent();
 		
@@ -623,7 +624,7 @@ public class Data_loading {
 		Thread.sleep(3000);
 		driver.findElement(By.id("tab-PartnerRelationship-1__item")).click();
 		Thread.sleep(3000);	    
-	    driver.findElement(By.xpath("/html/body/div/partner-connect/div[2]/div/div/div[2]/div[2]/div/div/div/div/div/div[6]/div/div[1]/label/span")).click();
+	  //  driver.findElement(By.xpath("//html/body/div/partner-connect/div[2]/div/div/div[2]/div[2]/div/div/div/div/div/div[6]/div/div[1]/label/span")).click();
 	    Thread.sleep(3000);
 	    driver.findElement(By.id("btn_UPRelationship_Save")).click();
 	    Thread.sleep(3000);
@@ -641,7 +642,14 @@ public class Data_loading {
 	  driver1.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 	  driver1.navigate().to(baseUrl);
 	  return driver1;
-	  
-	  
 	 }
+	public int getRandomNumberFrom() {
+		int min=0; 
+		int max=100000;
+		Random foo = new Random();
+        int randomNumber = foo.nextInt((max + 1) - min) + min;
+
+        return randomNumber;
+
+    }
 }

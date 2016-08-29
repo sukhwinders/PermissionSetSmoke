@@ -83,9 +83,9 @@ public class TPG_Compliance_Set_Send_Customer_Admin_Requestor {
 				.id("RequirementType0")))
 				.selectByVisibleText("Approval");
 		driver.findElement(By.id("btnSend")).click();
-		driver.findElement(By.cssSelector("div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand"))
-			  .click();	
-		System.out.println("Success: Set Requirements and Send TP Group Compliance");
+		//driver.findElement(By.cssSelector("div.slds-x-small-buttons--horizontal > button.slds-button.slds-button--brand"))
+		//	  .click();	
+		//System.out.println("Success: Set Requirements and Send TP Group Compliance");
 		driver.switchTo().defaultContent();
 		Thread.sleep(3000);
 		 }
